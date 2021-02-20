@@ -19,6 +19,7 @@
         <div class="card p-1" style="max-width: 150px" *ngFor="let card of selected">
             <div class="card-body">
                 <h5 class="card-title">{{ card.title }}</h5>
+                <img *ngIf="card.image != null" src="assets/img/{{card.image}}" style="max-width: 100%;">
                 <button type="button" class="btn btn-warning" (click)="app.play(card.sound)" *ngIf="card.sound != null">Play ▶</button>
             </div>
         </div>

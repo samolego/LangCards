@@ -7,7 +7,7 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./memory.component.scss']
 })
 export class MemoryComponent implements OnInit {
-  selected: any;
+  selected: Array<any>;
 
   constructor(public app: AppComponent) {
     this.selected = null;
@@ -17,6 +17,8 @@ export class MemoryComponent implements OnInit {
 
   async select(type: string) {
     this.app.select(type);
-    this.selected = this.app.getSelected();
+    this.selected = [...this.app.getSelected()];
+    this.selected.push(...this.selected);
+    AppComponent.mixArray(this.selected);
   }
 }
