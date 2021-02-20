@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{iMBU:function(n){n.exports=JSON.parse('[{"title":"Cow","sound":null,"image":"smile.png"},{"title":"Bird","sound":null,"image":null}]')}}]);
