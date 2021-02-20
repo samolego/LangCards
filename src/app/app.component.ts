@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as components from '../assets/available.json';
+import * as components from '../cards/available.json';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     (components  as  any).default.forEach(el => {
-      import(`../assets/cards/${el.path}`).then(component => {
+      import(`../cards/${el.path}`).then(component => {
         this.available.set(el.name, (component  as  any).default);
       });
    });
