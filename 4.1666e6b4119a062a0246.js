@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"c2/x":function(n){n.exports=JSON.parse('[{"title":"Cow","sound":null,"image":"smile.png"},{"title":"Bird","sound":null,"image":null},{"title":"Lion","sound":null,"image":null},{"title":"Snake","sound":null,"image":null}]')}}]);
