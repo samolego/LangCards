@@ -27,7 +27,6 @@ export class MemoryComponent implements OnInit {
     this.score = 0;
     this.finished = false;
 
-    //this.app.select(null);
     this.app.select(type);
     const sel = JSON.parse(JSON.stringify(this.app.getSelected()));
     this.selected = sel;
@@ -38,6 +37,10 @@ export class MemoryComponent implements OnInit {
   async flip(card: number) {
     this.selected[card].show = true;
     this.flippedCards.push(card);
+
+    if(this.selected[card].sound != null) {
+      this.app.play(this.selected[card].sound);
+    }
 
     if(this.flippedCards.length > 2) {
       // Hides previous two cards
